@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
-from shoppingcart.views import shopcart_empty
+from shoppingcart.views import shopcart
 
 urlpatterns = [
-    url(r'^shopcart_empty/$',shopcart_empty,name='空购物车'),
+    url(r'^shopcart/$', shopcart, name='购物车'),
 ]

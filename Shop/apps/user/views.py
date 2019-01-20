@@ -50,3 +50,20 @@ class LoginView(View):
             return redirect('com:首页')
         else:
             return render(request, 'user/login.html', context={'form': form})
+
+
+# 动态
+def message(request):
+    return render(request, 'user/message.html')
+
+
+# 我的详情
+def member(request):
+    return render(request, 'user/member.html')
+
+
+# 系统设置
+def step(request):
+    return render(request, 'user/step.html')
+
+
