@@ -1,23 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>超市</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="renderer" content="webkit">
-        <meta http-equiv="Cache-Control" content="no-siteapp" />
-        <link rel="icon" type="image/png" href="/theme/default/images/favicon.png">
-		<link href="" rel="stylesheet" type="text/css" />
-		<link href="css/style.css" rel="stylesheet" type="text/css" />
-		<script src="js/jquery-1.10.2.min.js"></script>
-		<script src="js/time.js"></script>
-	</head>
-	<body>
-		<header data-am-widget="header" class="am-header am-header-default sq-head ">
+{% extends 'common/parent.html' %}
+
+
+
+{% block content %}
+<header data-am-widget="header" class="am-header am-header-default sq-head ">
 			<div class="am-header-left am-header-nav">
 				<a href="javascript:history.back()" class="">
 					<i class="am-icon-chevron-left"></i>
@@ -45,6 +31,4 @@
 		    <a href="" class="xy">《用户协议》</a>
 		      <div class="r-login">已有账号，请<a href="login.html" class="l-login">登录</a></div>
 	    </div>
-	   
-	</body>
-</html>
+{% endblock %}
