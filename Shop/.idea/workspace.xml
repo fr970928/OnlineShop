@@ -2,65 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f79ecb85-fc71-4869-8ad6-edb5385106a4" name="Default" comment="电商项目">
-      <change afterPath="$PROJECT_DIR$/templates/commodity/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/commodity/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/commodity/speed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/commodity/village.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/message.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/commodity/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/commodity/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/commodity/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/commodity/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/order/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/order/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/order/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/order/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/order/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/order/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/order/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/order/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/shoppingcart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shoppingcart/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/shoppingcart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shoppingcart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commodity/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commodity/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/common/parent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common/parent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/order/address.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/order/allorder.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/order/allorder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/order/tureorder.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/order/tureorder.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shoppingcart/order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shoppingcart/orderdetail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shoppingcart/pay.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shoppingcart/shopcart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shoppingcart/shopcart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/address.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/allorder.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/boundphone.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/collect.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commodity/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/forgetpassword.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/gladdress.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/infor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/integral.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/integralexchange.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/integralrecords.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commodity/tidings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/job.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/member.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/member.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/money.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/mymessage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/myrecommend.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commodity/city.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commodity/recharge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/recommend.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/records.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/reg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/saftystep.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/step.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/step.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/tureorder.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/ygq.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commodity/ygq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/yhq.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commodity/yhq.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -128,17 +71,17 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/user/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="30" column="62" lean-forward="true" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
+            <state relative-caret-position="360">
+              <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reg.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reg.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/user/reg.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="20" selection-start-line="8" selection-start-column="2" selection-end-line="17" selection-end-column="17" />
+            <state relative-caret-position="432">
+              <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
               <folding>
                 <element signature="e#521#542#0#HTML" expanded="true" />
                 <element signature="e#645#666#0#HTML" expanded="true" />
@@ -150,8 +93,17 @@
       <file leaf-file-name="parent.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/common/parent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+            <state relative-caret-position="312">
+              <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="infor.html" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Desktop/Supermarket/infor.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -210,8 +162,8 @@
         <option value="$PROJECT_DIR$/templates/user/member.html" />
         <option value="$PROJECT_DIR$/templates/user/step.html" />
         <option value="$PROJECT_DIR$/templates/user/reg.html" />
-        <option value="$PROJECT_DIR$/templates/user/login.html" />
         <option value="$PROJECT_DIR$/templates/common/parent.html" />
+        <option value="$PROJECT_DIR$/templates/user/login.html" />
       </list>
     </option>
   </component>
@@ -224,7 +176,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-497" />
     <option name="y" value="2" />
     <option name="width" value="1462" />
@@ -249,6 +201,17 @@
               <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="Shop" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
@@ -373,7 +336,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="13" />
@@ -381,10 +344,10 @@
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="3" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49946696" visible="true" weight="0.3217012" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.49946696" visible="true" weight="0.3217012" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info anchor="bottom" id="manage.py@Shop" order="6" sideWeight="0.49840087" weight="0.32924107" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19402985" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19402985" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="SciView" order="0" />
@@ -416,23 +379,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/user/reg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="60" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/user/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/user/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -757,28 +703,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/user/reg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding>
+            <element signature="e#521#542#0#HTML" expanded="true" />
+            <element signature="e#645#666#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/user/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="30" column="62" lean-forward="true" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
+        <state relative-caret-position="360">
+          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/common/parent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+        <state relative-caret-position="312">
+          <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/user/reg.html">
+    <entry file="file://$USER_HOME$/Desktop/Supermarket/css/amazeui.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="20" selection-start-line="8" selection-start-column="2" selection-end-line="17" selection-end-column="17" />
+        <state relative-caret-position="382">
+          <caret column="80732" lean-forward="true" selection-start-column="80732" selection-end-column="80732" />
           <folding>
-            <element signature="e#521#542#0#HTML" expanded="true" />
-            <element signature="e#645#666#0#HTML" expanded="true" />
+            <element signature="e#39738#40063#1" expanded="true" />
+            <element signature="e#158698#160051#2" expanded="true" />
+            <element signature="e#160670#161083#2" expanded="true" />
+            <element signature="e#161240#163633#2" expanded="true" />
+            <element signature="e#163780#166173#2" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Supermarket/infor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="50" />
         </state>
       </provider>
     </entry>
