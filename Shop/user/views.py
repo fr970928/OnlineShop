@@ -8,9 +8,10 @@ from Shop.user import set_password
 
 # 定义注册页面的视图类
 class RegisterView(View):
+
     def get(self, request):
         # 跳转注册表单
-        return render(request, 'user/register.html')
+        return render(request, 'user/reg.html')
 
     def post(self, request):  # 注册页面视图
         # 接收参数
@@ -28,7 +29,7 @@ class RegisterView(View):
             return redirect('user:登录')
         # 错误
         else:
-            return render(request, 'user/register.html', context={'form': form})
+            return render(request, 'user/login.html', context={'form': form})
 
 
 # 定义登录页面的视图类
@@ -49,6 +50,3 @@ class LoginView(View):
             return redirect('item:主页')
         else:
             return render(request, 'user/login.html', context={'form': form})
-
-
-from django.shortcuts import render

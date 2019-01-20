@@ -1,7 +1,7 @@
 from django import forms
 
-from user import set_password
-from user.models import Users
+from Shop.user import set_password
+from Shop.user.models import Users
 
 # 注册界面的Form
 
