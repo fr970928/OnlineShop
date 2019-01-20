@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from Shop.user.views import RegisterView, LoginView
+from user.views import RegisterView, LoginView
 
 urlpatterns = [
     url(r'^register/$', RegisterView.as_view(), name='注册'),

@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
-from Shop.user.models import Users
+from user.models import Users
 # Create your views here.
 from django.views import View
-from Shop.user.forms import RegisterModelForm, LoginModelForm
-from Shop.user import set_password
+from user.forms import RegisterModelForm, LoginModelForm
+from user import set_password
 
 
 # 定义注册页面的视图类
@@ -23,13 +23,13 @@ class RegisterView(View):
             clened_data = form.cleaned_data
             # 创建一个用户
             user = Users()
-            user.user_name = clened_data.get('user_name')
+            user.phone = clened_data.get('phone')
             user.password = set_password(clened_data.get('password'))
             user.save()
             return redirect('user:登录')
         # 错误
         else:
-            return render(request, 'user/login.html', context={'form': form})
+            return render(request, 'user/reg.html', context={'form': form})
 
 
 # 定义登录页面的视图类
@@ -46,7 +46,7 @@ class LoginView(View):
         if form.is_valid():
             user = form.cleaned_data.get('user')
             request.session['ID'] = user.pk
-            request.session['user_name'] = user.user_name
-            return redirect('item:主页')
+            request.session['phone'] = user.phone
+            return redirect('com:首页')
         else:
             return render(request, 'user/login.html', context={'form': form})
