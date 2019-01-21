@@ -67,3 +67,101 @@ def step(request):
     return render(request, 'user/step.html')
 
 
+# 个人资料
+def infor(request):
+    return render(request, 'user/infor.html')
+
+
+# 关于我们
+def about(request):
+    return render(request, 'user/about.html')
+
+
+# 账户余额
+def records(request):
+    return render(request, 'user/records.html')
+
+
+# 积分
+def integral(request):
+    return render(request, 'user/integral.html')
+
+
+# 积分兑换
+def integralexchange(request):
+    return render(request, 'user/integralexchange.html')
+
+
+# 兑换记录
+def integralrecords(request):
+    return render(request, 'user/integralrecords.html')
+
+
+# 我的收藏
+def collect(request):
+    return render(request, 'user/collect.html')
+
+
+# 我的收藏编辑
+def collect_edit(request):
+    return render(request, 'user/collect-edit.html')
+
+
+# 收货地址
+def gladdress(request):
+    return render(request, 'user/gladdress.html')
+
+
+# 新增收货地址
+def address(request):
+    return render(request, 'user/address.html')
+
+
+# 安全设置
+def saftystep(request):
+    return render(request, 'user/saftystep.html')
+
+
+# 修改密码
+def password(request):
+    return render(request, 'user/password.html')
+
+
+# 支付密码
+def payment(request):
+    return render(request, 'user/payment.html')
+
+
+# 绑定手机
+def boundphone(request):
+    return render(request, 'user/boundphone.html')
+
+
+# 我的钱包
+def money(request):
+    return render(request, 'user/money.html')
+
+
+# 我要兼职
+def job(request):
+    return render(request, 'user/job.html')
+
+
+# 兼职申请记录
+def application(request):
+    return render(request, 'user/application.html')
+
+
+# 申请兼职
+def applicationjob(request):
+    return render(request, 'user/applicationjob.html')
+
+
+# 推荐有奖
+def recommend(request):
+    return render(request, 'user/recommend.html')
+
+
+# 我的推荐
+def myrecommend(request):
+    return render(request, 'user/myrecommend.html')

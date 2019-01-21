@@ -18,7 +18,7 @@
 	    <ul class="safty">
 	    	<li>
 	    		<a href="">
-	    			<img src="images/2-icon.png" width="40" />
+	    			<img src="{% static 'images/2-icon.png' %}" width="40" />
 	    			<i>接收新消息通知</i>
 	    			 <section class="model-10">
 						  <div class="checkbox">
@@ -30,7 +30,7 @@
 	    	</li>
 	    	<li>
 	    		<a href="">
-	    			<img src="images/2icon1.png" width="40" />
+	    			<img src="{% static 'images/2icon1.png' %}" width="40" />
 	    			<i>清空缓存</i>
 	    			<span class="am-icon-angle-right"></span>
 	    			<i style="float: right; padding-right: 10px;">1.89 MB</i>
@@ -38,14 +38,14 @@
 	    	</li>
 	    	<li>
 	    		<a href="">
-	    			<img src="images/2icon2.png" width="40" />
+	    			<img src="{% static 'images/2icon2.png' %}" width="40" />
 	    			<i>检查更新</i>
 	    			<span class="am-icon-angle-right"></span>
 	    			<i style="float: right; padding-right: 10px;">已经是最新版</i>
 	    		</a>
 	    	</li><li>
-	    		<a href="about.html">
-	    			<img src="images/2icon3.png" width="40" />
+	    		<a href="{% url 'user:关于我们' %}">
+	    			<img src="{% static 'images/2icon3.png' %}" width="40" />
 	    			<i>关于我们</i>
 	    			<span class="am-icon-angle-right"></span>
 
