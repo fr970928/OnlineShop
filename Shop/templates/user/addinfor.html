@@ -13,34 +13,30 @@
 			<h1 class="am-header-title">
   	            <a href="" class="">个人资料</a>
             </h1>
-            <div class="am-header-right am-header-nav">
-			    <a href="{% url 'user:修改个人资料' %}" class="">
-		        编辑
-		        </a>
-			</div>
 	    </header>
-        {% for data in data %}
-
+        <form action="" method="post" >
+            {% csrf_token %}
 	    <div style="height: 49px;"></div>
 	    <ul class="safty1">
 	    	<li>
-	    		<a href="">
+{#	    		<a href="">#}
 	    			<i style="margin-top: 25px;">头像</i>
 	    			<div class="infor-pic">
-	    				<img src="{% static 'images/touxiang.png' %}" />
+	    				<img src="{% static 'images/infortx.png' %}" />
 	    			</div>
-	    		</a>
+{#	    		</a>#}
 	    	</li>
 	    	<li>
-	    		<a href="">
+{#	    		<a href="">#}
 	    			<i>昵称</i>
-	    			<input class="infor-tele" value="{{ data.user_name }}"/>
-	    		</a>
+	    			<input class="infor-tele" placeholder="请输入昵称" type="text" name="user_name" value="{{ request.POST.user_name }}"/>
+                    <p class="am-text-danger">{{ form.errors.user_name.0 }}</p>
+{#	    		</a>#}
 	    	</li>
 	    	<li>
-	    		<a href="">
+{#	    		<a href="">#}
 	    			<i>性别</i>
-                    <input class="infor-tele" value="{{ data.get_gender_display }}"/>
+                    <input class="infor-tele" placeholder="请输入性别" type="text" name="gender" value="{{ request.POST.gender }}"/>
 {#	    			<i class="infor-tele">#}
 {#	    				<label class="am-radio-inline">#}
 {#				          <input type="radio" name="radio10" checked="checked" value="1" data-am-ucheck>男#}
@@ -49,36 +45,33 @@
 {#				          <input type="radio" name="radio10" value="1" data-am-ucheck>女#}
 {#				        </label>#}
 {#	    			</i>#}
-	    		</a>
+{#	    		</a>#}
 	    	</li><li>
-	    		<a href="">
+{#	    		<a href="">#}
 	    			<i>生日</i>
-                    <input class="infor-tele" placeholder="{{ data.birthday }}"/>
-	    		</a>
+                    <input class="infor-tele" placeholder="出生日期" type="text" name="birthday" value="{{ request.POST.birthday }}"/>
+{#	    		</a>#}
 	    	</li>
 	    </ul>
 	    <div style="height: 10px; background: #efefef;"></div>
 	     <ul class="safty1">
 	    	<li>
 	    			<i>学校</i>
-	    			<input class="infor-tele" placeholder="{{ data.school }}"/>
+	    			<input class="infor-tele" placeholder="就读于哪个学校" type="text" name="school" value="{{ request.POST.school }}"/>
 	    	</li>
 	    	<li>
 	    			<i>位置</i>
-	    			<input class="infor-tele" placeholder="{{ data.address }}"/>
+	    			<input class="infor-tele" placeholder="详细地址" type="text" name="address" value="{{ request.POST.address }}"/>
 	    	</li>
 	    	<li>
 	    			<i>故乡</i>
-                    <input class="infor-tele" placeholder="{{ data.hometown }}"/>
-	    	</li>
-	    	<li>
-	    			<i>手机</i>
-                    <input class="infor-tele" placeholder="{{ data.phone }}"/>
+                    <input class="infor-tele" placeholder="来自哪里" type="text" name="hometown" value="{{ request.POST.hometown }}"/>
 	    	</li>
 	    </ul>
-        {% endfor %}
+            <button type="submit" class="login-btn">修改</button>
 	    <script src="{% static 'js/jquery.min.js' %}"></script>
         <script src="{% static 'js/amazeui.min.js' %}"></script>
+        </form>
 	</body>
 
 {% endblock %}

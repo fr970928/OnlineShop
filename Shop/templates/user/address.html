@@ -15,19 +15,24 @@
   	            <a href="" class="">新增收货地址</a>
             </h1>
 	    </header>
+        <form action="" method="post" >
+            {% csrf_token %}
+
+
 	    <div style="height: 60px;"></div>
 	    <ul class="address">
-	    	<li>
-	    		<a href="{% url 'com:校区选择' %}"><input type="text" class="add-input"  disabled="disabled" placeholder="宿舍区" />
-	    		<i class="am-icon-angle-right" style="float: right; margin-top: 5px;"></i></a>
-	    	</li>
-	    	<li>
-	    		<a href="{% url 'com:校区选择' %}"><input type="text" class="add-input"  disabled="disabled" placeholder="哪栋楼" />
-	    		<i class="am-icon-angle-right" style="float: right; margin-top: 5px;"></i></a>
-	    	</li>
-	    	<li><input type="text" class="add-input" placeholder="你在哪" /></li>
-	    	<li><input type="text" class="add-input" placeholder="收货人" /></li>
-	    	<li><input type="text" class="add-input" placeholder="13000000000" /></li>
+            <li><input type="text" class="add-input" placeholder="收货人" name="name" value="{{ request.POST.name }}"/></li>
+            <p class="am-text-danger">{{ form.errors.name.0 }}</p>
+	    	<li><input type="text" class="add-input" placeholder="电话" name="telephone" value="{{ request.POST.telephone }}"/></li>
+            <p class="am-text-danger">{{ form.errors.telephone.0 }}</p>
+	    	<li><input type="text" class="add-input" placeholder="所在省份" name="province" value="{{ request.POST.province }}"/></li>
+            <p class="am-text-danger">{{ form.errors.province.0 }}</p>
+	    	<li><input type="text" class="add-input" placeholder="城市" name="city" value="{{ request.POST.city }}"/></li>
+            <p class="am-text-danger">{{ form.errors.city.0 }}</p>
+	    	<li><input type="text" class="add-input" placeholder="地区" name="area" value="{{ request.POST.area }}"/></li>
+            <p class="am-text-danger">{{ form.errors.area.0 }}</p>
+	    	<li><input type="text" class="add-input" placeholder="详细地址" name="brief" value="{{ request.POST.brief }}"/></li>
+            <p class="am-text-danger">{{ form.errors.brief.0 }}</p>
 	    </ul>
 	    <div class="moren">
 	    	<label class="am-checkbox am-warning">
@@ -35,9 +40,11 @@
             </label>
 
 	    </div>
-	    <input type="button" class="login-btn" value="确认提交">
+{#	    <input type="button" class="login-btn" value="确认提交">#}
+            <button type="submit" class="login-btn">确认提交</button>
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/amazeui.min.js' %}"></script>
+        </form>
 	</body>
 
 {% endblock %}

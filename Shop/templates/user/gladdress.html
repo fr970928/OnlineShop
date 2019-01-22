@@ -21,9 +21,10 @@
 	    </header>
 	    <div style="height: 49px;"></div>
 	    <ul class="address-list">
+            {% for data in data %}
 	    	<li class="curr">
-	    		<p>收货人：徐女士&nbsp;&nbsp;182********</p>
-	    		<p class="order-add1">收货地址：江西省南昌市 青云谱区解放西路258号江西省南昌市 青云谱区解放西路258号</p>
+	    		<p>收货人：{{ data.name }}&nbsp;&nbsp;{{ data.telephone }}</p>
+	    		<p class="order-add1">收货地址：{{ data.province }}&nbsp;{{ data.city }}&nbsp;{{ data.area }}&nbsp;{{ data.brief }}</p>
 	    	    <hr />
 	    	    <div class="address-cz">
 	    	    	<label class="am-radio am-warning">
@@ -33,42 +34,7 @@
                     <a href="">删除</a>
 	    	    </div>
 	    	</li>
-	    	<li>
-	    		<p>收货人：徐女士&nbsp;&nbsp;182********</p>
-	    		<p class="order-add1">收货地址：江西省南昌市 青云谱区解放西路258号江西省南昌市 青云谱区解放西路258号</p>
-	    	    <hr />
-	    	    <div class="address-cz">
-	    	    	<label class="am-radio am-warning">
-                       <input type="radio" name="radio3" value="" data-am-ucheck > 设为默认
-                    </label>
-                    <a href=""><img src="{% static 'images/bj.png' %}" width="18" />&nbsp;编辑</a>
-                    <a href="">删除</a>
-	    	    </div>
-	    	</li>
-	    	<li>
-	    		<p>收货人：徐女士&nbsp;&nbsp;182********</p>
-	    		<p class="order-add1">收货地址：江西省南昌市 青云谱区解放西路258号江西省南昌市 青云谱区解放西路258号</p>
-	    	    <hr />
-	    	    <div class="address-cz">
-	    	    	<label class="am-radio am-warning">
-                       <input type="radio" name="radio3" value="" data-am-ucheck > 设为默认
-                    </label>
-                    <a href=""><img src="{% static 'images/bj.png' %}" width="18" />&nbsp;编辑</a>
-                    <a href="">删除</a>
-	    	    </div>
-	    	</li>
-	    	<li>
-	    		<p>收货人：徐女士&nbsp;&nbsp;182********</p>
-	    		<p class="order-add1">收货地址：江西省南昌市 青云谱区解放西路258号江西省南昌市 青云谱区解放西路258号</p>
-	    	    <hr />
-	    	    <div class="address-cz">
-	    	    	<label class="am-radio am-warning">
-                       <input type="radio" name="radio3" value="" data-am-ucheck > 设为默认
-                    </label>
-                    <a href=""><img src="{% static 'images/bj.png' %}" width="18" />&nbsp;编辑</a>
-                    <a href="">删除</a>
-	    	    </div>
-	    	</li>
+            {% endfor %}
 	    </ul>
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/amazeui.min.js' %}"></script>

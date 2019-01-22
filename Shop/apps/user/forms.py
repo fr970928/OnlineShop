@@ -1,7 +1,8 @@
 from django import forms
 
 from user import set_password
-from user.models import Users
+from user.models import Users, Address
+
 
 # 注册界面的Form
 
@@ -88,3 +89,53 @@ class LoginModelForm(forms.ModelForm):
 
         self.cleaned_data['user'] = user
         return self.cleaned_data
+
+
+# 判断修改个人资料
+class InforModelForm(forms.ModelForm):
+    user_name = forms.CharField(max_length=16,
+                                min_length=4,
+                                error_messages={
+                                    'required': '昵称不能为空',
+                                    'min_length': '昵称长度不能低于4个字符',
+                                    'max_length': '昵称长度不能低于16个字符'}
+                                )
+
+    class Meta:
+        model = Users
+        exclude = ['password']
+
+
+# 判断收货地址
+class AddressModelForm(forms.ModelForm):
+    name = forms.CharField(max_length=50,
+                           error_messages={
+                               'required': '收货人不能为空'
+                           })
+    telephone = forms.CharField(max_length=11,
+                                min_length=11,
+                                error_messages={
+                                    'required': '电话不能为空',
+                                    'min_length': '电话长度不正确',
+                                    'max_length': '电话长度不正确'
+                                })
+    province = forms.CharField(max_length=50,
+                               error_messages={
+                                   'required': '省份不能为空'
+                               })
+    city = forms.CharField(max_length=50,
+                           error_messages={
+                               'required': '城市不能为空'
+                           })
+    area = forms.CharField(max_length=50,
+                           error_messages={
+                               'required': '地区不能为空'
+                           })
+    brief = forms.CharField(max_length=50,
+                            error_messages={
+                                'required': '详细地址不能为空'
+                            })
+
+    class Meta:
+        model = Address
+        exclude = ['']

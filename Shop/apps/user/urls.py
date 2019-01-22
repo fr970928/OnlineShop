@@ -1,8 +1,8 @@
 from django.conf.urls import url
 
 from user.views import RegisterView, LoginView, message, member, step, infor, about, records, integral, \
-    integralexchange, integralrecords, collect, collect_edit, gladdress, address, saftystep, password, payment, \
-    boundphone, money, job, application, applicationjob, recommend, myrecommend
+    integralexchange, integralrecords, collect, collect_edit, gladdress, saftystep, password, payment, \
+    boundphone, money, job, application, applicationjob, recommend, myrecommend, AddinfoView, AddressView
 
 urlpatterns = [
     url(r'^register/$', RegisterView.as_view(), name='注册'),
@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^member/$', member, name='我的详情'),
     url(r'^step/$', step, name='系统设置'),
     url(r'^infor/$', infor, name='个人资料'),
+    url(r'^addinfor/$', AddinfoView.as_view(), name='修改个人资料'),
     url(r'^about/$', about, name='关于我们'),
     url(r'^records/$', records, name='账户余额'),
     url(r'^integral/$', integral, name='积分'),
@@ -19,7 +20,7 @@ urlpatterns = [
     url(r'^collect/$', collect, name='我的收藏'),
     url(r'^collect_edit/$', collect_edit, name='我的收藏编辑'),
     url(r'^gladdress/$', gladdress, name='收货地址'),
-    url(r'^address/$', address, name='新增收货地址'),
+    url(r'^address/$', AddressView.as_view(), name='新增收货地址'),
     url(r'^saftystep/$', saftystep, name='安全设置'),
     url(r'^password/$', password, name='修改密码'),
     url(r'^payment/$', payment, name='支付密码'),
