@@ -7,10 +7,10 @@
 		<header data-am-widget="header" class="am-header am-header-default sq-head ">
 
 			<h1 class="am-header-title">
-  	            <a href="" class="">动态</a>
+  	            <a href="{% url 'com:首页' %}" class="">动态</a>
             </h1>
             <div class="am-header-right am-header-nav">
-				<a href="release.html" class="">
+				<a href="{% url 'user:发布动态' %}" class="">
 					<i class="release">+</i>
 				</a>
 			</div>
@@ -20,12 +20,12 @@
 	    	<li>
 	    		<div class="dt-top">
 	    			<div class="dt-top-left">
-	    				<img src="images/my.png" width="60" height="60" /><br />
+	    				<img src="{% static 'images/my.png' %}" width="60" height="60" /><br />
 	    				<a href=""><span>+</span>关注</a>
 	    			</div>
 	    			<div class="dt-top-right">
 	    				<p class="name">贝贝酱</p>
-	    				<p class="content"><a href="messdetail.html">为了展现学子的亮丽风采，促进校园文化发展，丰富大学校园生活，借此机会策划... ...</a></p>
+	    				<p class="content"><a href="{% url 'user:动态详情' %}">为了展现学子的亮丽风采，促进校园文化发展，丰富大学校园生活，借此机会策划... ...</a></p>
 	    				<p class="dz">来自南昌大学前湖校区  <i class="time"> 10分钟前</i></p>
 	    			</div>
 	    		</div>
@@ -38,12 +38,12 @@
 	    	<li>
 	    		<div class="dt-top">
 	    			<div class="dt-top-left">
-	    				<img src="images/my.png" width="60" height="60" /><br />
+	    				<img src="{% static 'images/my.png' %}" width="60" height="60" /><br />
 	    				<a href=""><span>√</span>已关注</a>
 	    			</div>
 	    			<div class="dt-top-right">
 	    				<p class="name">贝贝酱</p>
-	    				<p class="content"><a href="messdetail.html">为了展现学子的亮丽风采，促进校园文化发展，丰富大学校园生活，借此机会策划... ...</a></p>
+	    				<p class="content"><a href="{% url 'user:动态详情' %}">为了展现学子的亮丽风采，促进校园文化发展，丰富大学校园生活，借此机会策划... ...</a></p>
 	    				<p class="dz">来自南昌大学前湖校区  <i class="time"> 10分钟前</i></p>
 	    			</div>
 	    		</div>
@@ -56,12 +56,12 @@
 	    	<li>
 	    		<div class="dt-top">
 	    			<div class="dt-top-left">
-	    				<img src="images/my.png" width="60" height="60" /><br />
+	    				<img src="{% static 'images/my.png' %}" width="60" height="60" /><br />
 	    				<a href=""><span>+</span>关注</a>
 	    			</div>
 	    			<div class="dt-top-right">
 	    				<p class="name">贝贝酱</p>
-	    				<p class="content"><a href="messdetail.html">为了展现学子的亮丽风采，促进校园文化发展，丰富大学校园生活，借此机会策划... ...</a></p>
+	    				<p class="content"><a href="{% url 'user:动态详情' %}">为了展现学子的亮丽风采，促进校园文化发展，丰富大学校园生活，借此机会策划... ...</a></p>
 	    				<p class="dz">来自南昌大学前湖校区  <i class="time"> 10分钟前</i></p>
 	    			</div>
 	    		</div>
@@ -76,11 +76,11 @@
 	    	<div style="position: fixed; background: #ededed; bottom: 0; width: 100%; ">
 	    	<h2>转发</h2>
 	    	<ul class="share-style">
-	    		<li><a href=""><img src="images/sqq.png" width="60"/><p>QQ</p></a></li>
-	    		<li><a href=""><img src="images/sweixin.png" width="60" /><p>微信好友</p></a></li>
-	    		<li><a href=""><img src="images/sweixinfriend.png" width="60"/><p>微信朋友圈</p></a></li>
-	    		<li><a href=""><img src="images/skongjian.png" width="60" /><p>QQ空间</p></a></li>
-	    		<li><a href=""><img src="images/ssina.png" width="60" /><p>新浪微博</p></a></li>
+	    		<li><a href=""><img src="{% static 'images/sqq.png' %}" width="60"/><p>QQ</p></a></li>
+	    		<li><a href=""><img src="{% static 'images/sweixin.png' %}" width="60" /><p>微信好友</p></a></li>
+	    		<li><a href=""><img src="{% static 'images/sweixinfriend.png' %}" width="60"/><p>微信朋友圈</p></a></li>
+	    		<li><a href=""><img src="{% static 'images/skongjian.png' %}" width="60" /><p>QQ空间</p></a></li>
+	    		<li><a href=""><img src="{% static 'images/ssina.png' %}" width="60" /><p>新浪微博</p></a></li>
 	    	</ul>
 	    	<div class="popup-close">取消</div>
 	    	</div>

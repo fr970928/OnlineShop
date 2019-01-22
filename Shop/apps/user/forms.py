@@ -49,8 +49,22 @@ class RegisterModelForm(forms.ModelForm):
         re_pas = self.cleaned_data.get('re_password')
         if pas and re_pas and pas != re_pas:
             raise forms.ValidationError({'re_password': '两次密码不一致'})
-        else:
-            return self.cleaned_data
+
+            # 验证 用户传入的验证码和redis中的是否一样
+            # 用户传入的
+            try:
+                captcha = self.cleaned_data.get('captcha')
+                phone = self.cleaned_data.get('phone', '')
+                # 获取redis中的
+                r = get_redis_connection()
+                random_code = r.get(phone)  # 二进制, 转码
+                random_code = random_code.decode('utf-8')
+                # 比对
+                if captcha and captcha != random_code:
+                    raise forms.ValidationError({"captcha": "验证码输入错误!"})
+            except:
+                raise forms.ValidationError({"captcha": "验证码输入错误!"})
+        return self.cleaned_data
 
 
 # 判断登录界面的Form
@@ -103,7 +117,87 @@ class InforModelForm(forms.ModelForm):
 
     class Meta:
         model = Users
-        exclude = ['password']
+        exclude = ['phone', 'password']
+
+
+# 判断修改密码
+class PasswordModelForm(forms.ModelForm):
+    id = forms.CharField()
+    new_password = forms.CharField(max_length=16,
+                                   min_length=6,
+                                   error_messages={
+                                       'required': '密码不能为空',
+                                       'min_length': '密码不能少于6个字符',
+                                       'max_length': '密码不能超过16个字符'
+                                   })
+    re_new_password = forms.CharField(max_length=16,
+                                      min_length=6,
+                                      error_messages={
+                                          'required': '重复密码不能为空',
+                                          'min_length': '密码不能少于6个字符',
+                                          'max_length': '密码不能超过16个字符',
+                                      })
+
+    class Meta:
+        model = Users
+        fields = ['password', 'id']
+
+    def clean(self):
+        id = self.cleaned_data.get('id')
+        password = self.cleaned_data.get('password', '')
+        res = Users.objects.get(pk=id)
+        if res.password != set_password(password):
+            raise forms.ValidationError({'password': '密码不正确'})
+        # 判断两次新密码是否一致
+        new_pas = self.cleaned_data.get('new_password')
+        re_new_pas = self.cleaned_data.get('re_new_password')
+        if new_pas and re_new_pas and new_pas != re_new_pas:
+            raise forms.ValidationError({'re_new_password': '两次密码不一致'})
+        return self.cleaned_data
+
+
+# 判断忘记密码
+class ForgetModelForm(forms.ModelForm):
+    password = forms.CharField(max_length=16,
+                               min_length=6,
+                               error_messages={
+                                   'required': '密码不能为空',
+                                   'min_length': '密码不能少于6个字符',
+                                   'max_length': '密码不能超过16个字符'
+                               })
+    re_password = forms.CharField(max_length=16,
+                                  min_length=6,
+                                  error_messages={
+                                      'required': '重复密码不能为空',
+                                      'min_length': '密码不能少于6个字符',
+                                      'max_length': '密码不能超过16个字符',
+                                  })
+
+    class Meta:
+        model = Users
+        fields = []
+
+    def clean(self):
+        pas = self.cleaned_data.get('password')
+        re_pas = self.cleaned_data.get('re_password')
+        if pas and re_pas and pas != re_pas:
+            raise forms.ValidationError({'re_password': '两次密码不一致'})
+
+            # 验证 用户传入的验证码和redis中的是否一样
+            # 用户传入的
+            try:
+                captcha = self.cleaned_data.get('captcha')
+                phone = self.cleaned_data.get('phone', '')
+                # 获取redis中的
+                r = get_redis_connection()
+                random_code = r.get(phone)  # 二进制, 转码
+                random_code = random_code.decode('utf-8')
+                # 比对
+                if captcha and captcha != random_code:
+                    raise forms.ValidationError({"captcha": "验证码输入错误!"})
+            except:
+                raise forms.ValidationError({"captcha": "验证码输入错误!"})
+        return self.cleaned_data
 
 
 # 判断收货地址

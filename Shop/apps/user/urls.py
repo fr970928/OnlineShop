@@ -1,13 +1,16 @@
 from django.conf.urls import url
 
 from user.views import RegisterView, LoginView, message, member, step, infor, about, records, integral, \
-    integralexchange, integralrecords, collect, collect_edit, gladdress, saftystep, password, payment, \
-    boundphone, money, job, application, applicationjob, recommend, myrecommend, AddinfoView, AddressView
+    integralexchange, integralrecords, collect, collect_edit, gladdress, saftystep, payment, \
+    boundphone, money, job, application, applicationjob, recommend, myrecommend, AddinfoView, AddressView, SendMsg, \
+    PasswordView, ForgetView, release, messdetail
 
 urlpatterns = [
     url(r'^register/$', RegisterView.as_view(), name='注册'),
     url(r'^login/$', LoginView.as_view(), name='登录'),
     url(r'^message/$', message, name='动态'),
+    url(r'^release/$', release, name='发布动态'),
+    url(r'^messdetail/$', messdetail, name='动态详情'),
     url(r'^member/$', member, name='我的详情'),
     url(r'^step/$', step, name='系统设置'),
     url(r'^infor/$', infor, name='个人资料'),
@@ -22,7 +25,7 @@ urlpatterns = [
     url(r'^gladdress/$', gladdress, name='收货地址'),
     url(r'^address/$', AddressView.as_view(), name='新增收货地址'),
     url(r'^saftystep/$', saftystep, name='安全设置'),
-    url(r'^password/$', password, name='修改密码'),
+    url(r'^password/$', PasswordView.as_view(), name='修改密码'),
     url(r'^payment/$', payment, name='支付密码'),
     url(r'^boundphone/$', boundphone, name='绑定手机'),
     url(r'^money/$', money, name='我的钱包'),
@@ -31,4 +34,6 @@ urlpatterns = [
     url(r'^applicationjob/$', applicationjob, name='申请兼职'),
     url(r'^recommend/$', recommend, name='推荐有奖'),
     url(r'^myrecommend/$', myrecommend, name='我的推荐'),
+    url(r'^sendMsg/$', SendMsg.as_view(), name='发送短消验证码'),
+    url(r'^forgetpassword/$', ForgetView.as_view(), name='忘记密码'),
 ]
