@@ -1,4 +1,6 @@
 from django.shortcuts import render
+
+from commodity.models import GoodsClassifyModel
 from user.helper import check_login
 
 # Create your views here.
@@ -60,7 +62,8 @@ def detail(request):
 
 # 超市
 def category(request):
-    return render(request, 'commodity/category.html')
+    data = GoodsClassifyModel.objects.all()
+    return render(request, 'commodity/category.html', context={'data': data})
 
 
 # 商品列表

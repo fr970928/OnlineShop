@@ -34,7 +34,6 @@ class Users(models.Model):
     # 设置头像
     head = models.ImageField(upload_to='head/%Y%m', default='head/memtx.png')
 
-
     def __str__(self):
         return self.user_name
 
