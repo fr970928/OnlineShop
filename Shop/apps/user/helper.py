@@ -25,7 +25,7 @@ def check_login(func):
 def login(request, user):
     request.session['ID'] = user.pk
     request.session['phone'] = user.phone
-    # request.session['head'] = user.head
+    request.session['head'] = user.head
     request.session.set_expiry(0)  # 关闭浏览器就消失
 
 

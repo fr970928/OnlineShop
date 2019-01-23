@@ -1,6 +1,9 @@
 {% extends 'common/parent.html' %}
 {% load static %}
 
+{% block header %}
+<link href="{% static 'css/check.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
 
 {% block content %}
     <body>
@@ -27,7 +30,7 @@
 	    		<a href="">
 	    			<i style="margin-top: 25px;">头像</i>
 	    			<div class="infor-pic">
-	    				<img src="{% static 'images/touxiang.png' %}" />
+	    				<img src="{{ MEDIA_URL }}{{request.session.head}}" />
 	    			</div>
 	    		</a>
 	    	</li>

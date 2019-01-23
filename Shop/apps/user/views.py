@@ -5,7 +5,7 @@ from django_redis import get_redis_connection
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, redirect
 import re
-from user.helper import check_login, send_sms
+from user.helper import check_login, send_sms, login
 from user.models import Users, Address
 # Create your views here.
 from django.views import View
@@ -157,7 +157,12 @@ class AddinfoView(View):
         id = request.session.get('ID')
         # 接受参数
         data = request.POST
+        head = request.FILES.get('head')
         user = Users.objects.get(pk=id)
+        if head is not None:
+            user.head = head
+            user.save()
+        login(request, user)
         # 表单验证合法
         form = InforModelForm(data, instance=user)
         if form.is_valid():
