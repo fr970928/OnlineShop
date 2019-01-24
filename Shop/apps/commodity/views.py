@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from commodity.models import GoodsClassifyModel
+from commodity.models import GoodsClassifyModel, BannerModel, GoodsSkuModel
 from user.helper import check_login
 
 # Create your views here.
@@ -8,7 +8,13 @@ from user.helper import check_login
 
 # 首页
 def index(request):
-    return render(request, 'commodity/index.html')
+    banner = BannerModel.objects.all()
+    data = GoodsSkuModel.objects.all()
+    context = {
+        'banner': banner,
+        "data": data
+    }
+    return render(request, 'commodity/index.html', context=context)
 
 
 # 首页左上城市选择
@@ -56,14 +62,25 @@ def s_list(request):
 
 
 # 商品详情
-def detail(request):
-    return render(request, 'commodity/detail.html')
+def detail(request, id):
+    data = GoodsSkuModel.objects.get(pk=id)
+    context = {
+        'data': data
+    }
+    return render(request, 'commodity/detail.html', context=context)
 
 
 # 超市
 def category(request):
-    data = GoodsClassifyModel.objects.all()
-    return render(request, 'commodity/category.html', context={'data': data})
+    # 查询分类名称
+    classify = GoodsClassifyModel.objects.all()
+    # 查询商品SKU详情
+    data = GoodsSkuModel.objects.all()
+    context = {
+        'classify': classify,
+        'data': data
+    }
+    return render(request, 'commodity/category.html', context=context)
 
 
 # 商品列表

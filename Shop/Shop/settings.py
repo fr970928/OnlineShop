@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     'commodity.apps.CommodityConfig',
     'order.apps.OrderConfig',
-    'shoppingcart.apps.ShoppingcartConfig'
+    'shopcart.apps.ShopcartConfig',
+    'ckeditor',  # 添加ckeditor富文本编辑器
+    'ckeditor_uploader',  # 添加ckeditor富文本编辑器文件上传部件
 ]
 
 MIDDLEWARE = [
@@ -132,6 +134,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # 添加django的缓存配置
 CACHES = {
@@ -157,3 +160,13 @@ MEDIA_URL = "/static/media/"
 
 # 配置url对应的物理地址
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+
+# 设置ckeditor的上传目录
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+# 编辑器样式配置
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+    },
+}

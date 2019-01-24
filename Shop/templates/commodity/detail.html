@@ -39,16 +39,21 @@
             </h1>
 	    </header>
 	    <div style="height: 49px;"></div>
-	    <!--图片轮换-->
+
+            <!--图片轮换-->
 		<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
 		  <ul class="am-slides">
-		    <li><img src="{% static 'images/pic.png' %}" /></li>
-		    <li><img src="{% static 'images/pic.png' %}" /></li>
+              {% for s in data.goodsalbummodel_set.all %}
+                    <li><img src="{{ MEDIA_URL }}{{ s.album_image }}" /></li>
+              {% endfor %}
+
+{#		    <li><img src="{{MEDIA_URL}}{{ data.logo }}" /></li>#}
+
 		  </ul>
 		</div>
 		<div class="detal-info" style="position: relative; width: 100%;">
-			<p>特价武夷山桐木关正山小种红茶高档礼盒</p>
-			<h2>商城价：<span>￥52.00</span></h2>
+			<p>{{data.goods_cate.class_name}}{{ data.goods_name }}</p>
+			<h2>商城价：<span>{{data.price}}</span></h2>
 			<div class="heart">
 				<img src="{% static 'images/herat.png' %}" width="25" id="imgflag" onclick="changeImage()" />
 				<p>收藏</p>
@@ -70,15 +75,18 @@
 		    <li class="am-active"><a href="#tab1">商品详情</a></li>
 		    <li><a href="#tab2">商品评论</a></li>
 		  </ul>
-		
+
 		  <div class="am-tabs-bd">
 		    <div class="am-tab-panel am-fade am-in am-active detail " id="tab1" >
-		            <p>产地: 中国大陆</p>
-                    <p>功效: 瘦身,美容,提神,抗氧化,保健,降三高</p>
-                    <p>保质期: >2年</p>
-                    <img src="{% static 'images/test11.png' %}" />
+		            <p>{{ data.goods_intro }}</p>
+{#                    <p>功效: 瘦身,美容,提神,抗氧化,保健,降三高</p>#}
+{#                    <p>保质期: >2年</p>#}
+                    <img src="{{ MEDIA_URL }}{{ data.logo }}" />
 		    </div>
 		    <div class="am-tab-panel am-fade detail " id="tab2">
+
+
+
 		         <!--<div class="comment">
 		         	<span>好评：</span>
 		         	<div class="com-good"></div>

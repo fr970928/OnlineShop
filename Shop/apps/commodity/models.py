@@ -1,3 +1,4 @@
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 
 # Create your models here.
@@ -14,7 +15,7 @@ class BasicsModel(models.Model):
     update_time = models.DateTimeField(auto_now=True, verbose_name='修改时间')
 
     class Meta:
-        # 设置为抽象类,可以被迁移
+        # 设置为抽象类,不会被迁移
         abstract = True
 
 
@@ -70,7 +71,7 @@ class GoodsUnitModel(BasicsModel):
 # 商品spu表
 class SpuModel(BasicsModel):
     spu_name = models.CharField(max_length=50, verbose_name='商品spu名称')
-    spu_desc = models.TextField(verbose_name='商品spu描述')
+    spu_desc = RichTextUploadingField(verbose_name='商品spu描述')
 
     def __str__(self):
         return self.spu_name

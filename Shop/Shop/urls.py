@@ -20,6 +20,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^user/', include('user.urls', namespace='user')),
     url(r'^com/', include('commodity.urls', namespace='com')),
-    url(r'^cart/', include('shoppingcart.urls', namespace='cart')),
+    url(r'^cart/', include('shopcart.urls', namespace='cart')),
     url(r'^order/', include('order.urls', namespace='order')),
+    # 上传部件自动调用的上传地址
+    url(r'^ckeditor/', include("ckeditor_uploader.urls")),
 ]
