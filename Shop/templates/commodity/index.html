@@ -79,7 +79,7 @@
         </li>
         <li>
             <div class="am-gallery-item">
-                <a href="{% url 'com:超市' %}" class="">
+                <a href="{% url 'com:超市' '' '' %}" class="">
                     <img src="{% static 'images/icon5.png' %}"/>
                     <p>超市</p>
                 </a>
@@ -106,22 +106,25 @@
     <!--不规则展示-->
     <div class="h-line"></div>
     <!-- 特色专区-->
+
+
     <div class="sq-title">
         <img src="{% static 'images/ts.png' %}" width="26"/>
         特色专区
     </div>
     <ul data-am-widget="gallery" class="am-gallery pro-list am-avg-sm-2 am-avg-md-2 am-avg-lg-4 am-gallery-default">
-        {% for d in data %}
+        {% for data in data %}
             <li>
                 <div class="am-gallery-item">
-                    <a href="{% url 'com:商品详情' d.pk %}" class="">
-                    <img src="{{ d.logo }}"/>
-                    <h3 class="am-gallery-title">{{ d.goods_spu.spu_name }}{{ d.goods_name }}</h3>
-                    <div class="am-gallery-desc">{{ d.price }}</div>
+                    <a href="{% url 'com:商品详情' data.pk %}" class="">
+                    <img src="{{ MEDIA_URL }}{{ data.logo }}"/>
+                    <h3 class="am-gallery-title">{{ data.goods_spu.spu_name }}{{ data.goods_name }}</h3>
+                    <div class="am-gallery-desc">{{ data.price }}</div>
                     </a>
                 </div>
             </li>
         {% endfor %}
+
 
     </ul>
     <!--签到-->

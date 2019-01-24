@@ -23,6 +23,7 @@ class BasicsModel(models.Model):
 class GoodsClassifyModel(BasicsModel):
     class_name = models.CharField(max_length=50, verbose_name='分类名称')
     class_intro = models.CharField(max_length=50, verbose_name='分类简介', null=True)
+    order = models.SmallIntegerField(default=0, verbose_name="排序")
 
     def __str__(self):
         return self.class_name
